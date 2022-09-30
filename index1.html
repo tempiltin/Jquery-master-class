@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .text{
+            width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        strong{
+            font-size: 24px;
+            padding: 20px 60px;
+            width: 100%;
+            text-align: center;
+            border-radius: 10px;
+            background: yellowgreen;
+            
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <script src="./script/jquery.js"></script>
+
+    <div class="row">
+        <input type="text" name="name" id="1">
+        <button>Add</button>
+    </div>
+
+    <div class="text">
+
+    </div>
+
+   <script>
+    $(document).ready(()=> {
+        var $btn = $("button")
+        $btn.click( ()=>{
+            var input = $("input:text").val()
+            //    console.log(input.val())
+            // e.preventDefault()
+            $(".text").html( "<strong>" + input + "</strong> " )
+           
+            // console.log($input)
+        })
+        
+    });
+   </script>
+</body>
+</html>
